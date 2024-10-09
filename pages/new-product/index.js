@@ -7,7 +7,9 @@ function NewProductPage() {
   const router = useRouter();
   const addProductHandler = (enterdData) => {
     axios.post(
-      `${process.env.APP_DEV || process.env.APP_PROD}/api/products`,
+      `${
+        process.env.NEXT_PUBLIC_APP_DEV || process.env.NEXT_PUBLIC_APP_PROD
+      }/api/products`,
       enterdData,
       {
         headers: { "Content-Type": "application/json" },

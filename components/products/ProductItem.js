@@ -19,7 +19,6 @@ function ProductItem(props) {
       confirmButtonText: "Yes, delete it!",
       cancelButtonText: "No, cancel!",
     });
-    console.log("SweetAlert result:", result);
     if (result.isConfirmed) {
       try {
         await axios.delete(
@@ -35,7 +34,6 @@ function ProductItem(props) {
           "Access denied. Only administrators are allowed to delete products.",
           "error"
         );
-        console.error("Error deleting product:", error);
       }
     }
   };

@@ -8,20 +8,10 @@ function UpdateProductForm(props) {
   const [image, setImage] = useState(props.productData.image || "");
   const [price, setPrice] = useState(props.productData.price || "");
   const [description, setDescription] = useState(props.productData.desc || "");
-  console.log(props.productData);
 
-  // const handleChangeName = (e) => {
-  //   setName(e.target.value);
-  // };
-  // const handleChangeImage = (e) => {
-  //   setImage(e.target.value);
-  // };
   const handleChangePrice = (e) => {
     setPrice(e.target.value);
   };
-  // const handleChangeDescription = (e) => {
-  //   setDescription(e.target.value);
-  // };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -44,25 +34,11 @@ function UpdateProductForm(props) {
         </h5>
         <div className={classes.control}>
           <label htmlFor="name">Product Name</label>
-          <input
-            type="text"
-            required
-            id="name"
-            value={name}
-            readOnly
-            // onChange={handleChangeName}
-          />
+          <input type="text" required id="name" value={name} readOnly />
         </div>
         <div className={classes.control}>
           <label htmlFor="image">Product Image</label>
-          <input
-            type="url"
-            required
-            id="image"
-            value={image}
-            readOnly
-            // onChange={handleChangeImage}
-          />
+          <input type="url" required id="image" value={image} readOnly />
         </div>
         <div className={classes.control}>
           <label htmlFor="description">Description</label>
@@ -71,7 +47,6 @@ function UpdateProductForm(props) {
             required
             rows="5"
             value={description}
-            // onChange={handleChangeDescription}
             readOnly
           ></textarea>
         </div>
@@ -88,7 +63,7 @@ function UpdateProductForm(props) {
           />
         </div>
         <div className={classes.actions}>
-          <button>Add Product</button>
+          <button>Update Product</button>
         </div>
       </form>
     </Card>
