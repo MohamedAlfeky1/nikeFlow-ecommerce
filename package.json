@@ -18,7 +18,8 @@
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "sweetalert2": "^11.13.2"
+    "sweetalert2": "^11.13.2",
+    "vercel": "^37.6.3"
   },
   "devDependencies": {
     "eslint": "^8",

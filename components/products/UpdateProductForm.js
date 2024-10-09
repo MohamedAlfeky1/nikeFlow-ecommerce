@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "../ui/Card";
 import classes from "./NewProductForm.module.css";
 
-function updateProductForm(props) {
+function UpdateProductForm(props) {
   const [name, setName] = useState(props.productData.name || "");
   const [image, setImage] = useState(props.productData.image || "");
   const [price, setPrice] = useState(props.productData.price || "");
@@ -95,4 +95,4 @@ function updateProductForm(props) {
   );
 }
 
-export default updateProductForm;
+export default UpdateProductForm;
