@@ -14,9 +14,7 @@ function UpdateProduct(props) {
 
   const handleUpdateProduct = async (updatedProduct) => {
     const response = await axios.put(
-      `${
-        process.env.NEXT_PUBLIC_APP_DEV || process.env.NEXT_PUBLIC_APP_PROD
-      }/api/products`,
+      `/api/products`,
       updatedProduct, // Send the data as the request body
       {
         params: { id: id }, // Send the ID as a query parameter

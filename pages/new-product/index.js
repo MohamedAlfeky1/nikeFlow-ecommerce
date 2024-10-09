@@ -6,15 +6,9 @@ import { useRouter } from "next/router";
 function NewProductPage() {
   const router = useRouter();
   const addProductHandler = (enterdData) => {
-    axios.post(
-      `${
-        process.env.NEXT_PUBLIC_APP_DEV || process.env.NEXT_PUBLIC_APP_PROD
-      }/api/products`,
-      enterdData,
-      {
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    axios.post(`/api/products`, enterdData, {
+      headers: { "Content-Type": "application/json" },
+    });
     router.push("/");
   };
 
