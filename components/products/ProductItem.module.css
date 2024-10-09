@@ -1,0 +1,127 @@
+.item {
+  width: calc(33.33% - 40px);
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .item {
+    width: calc(50% - 40px);
+  }
+}
+@media (max-width: 576px) {
+  .item {
+    width: 100%;
+  }
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  transition: 0.3s;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image:hover {
+  transform: scale(1.2) rotate(-7deg);
+}
+
+.content {
+  position: absolute;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: hsl(0 0% 100% / 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  color: #131213;
+}
+
+/* .actions .deleteBtn,
+.actions .updateBtn {
+  position: absolute;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #fff;
+  background-color: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-size: 30px;
+} */
+
+.deleteBtn,
+.updateBtn {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 10px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  opacity: 0.3;
+}
+.updateIcon {
+  font-size: 400px;
+}
+.deleteBtn {
+  left: 10px;
+}
+.updateBtn {
+  left: 55px;
+}
+
+.updateBtn:hover,
+.updateBtn:active,
+.deleteBtn:hover,
+.deleteBtn:active {
+  background-color: #1a202d;
+  opacity: 1;
+}
+
+.detailsBtn {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 22px;
+  background: hsl(0 0% 100% / 0.5);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.item:hover .detailsBtn {
+  bottom: 18%;
+  opacity: 1;
+}
+
+.item .detailsBtn {
+  bottom: -50px;
+  opacity: 0;
+}

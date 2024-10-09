@@ -1,0 +1,22 @@
+.main {
+  padding: 0 160px;
+  margin-bottom: 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    padding: 0 65px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 0 20px;
+  }
+}

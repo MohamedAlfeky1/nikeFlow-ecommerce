@@ -1,0 +1,125 @@
+.footer {
+  background-color: black;
+  color: #fff;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.me {
+  font-size: 17px;
+}
+.a {
+  line-height: 1;
+}
+.a {
+  text-decoration: none;
+}
+.a:hover {
+  text-decoration: underline;
+}
+
+.socialBtns .btn,
+.socialBtns .btn:before,
+.socialBtns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.socialBtns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.socialBtns .btn .fa {
+  transform: scale(0.6);
+}
+.socialBtns .btn.linkedin:before {
+  background-color: #3b5998;
+}
+.socialBtns .btn.linkedin .fa {
+  color: #3b5998;
+}
+.socialBtns .btn.twitter:before {
+  background-color: #3cf;
+}
+.socialBtns .btn.twitter .fa {
+  color: #3cf;
+}
+.socialBtns .btn.youtube:before {
+  background-color: #dc4a38;
+}
+.socialBtns .btn.youtube .fa {
+  color: #dc4a38;
+}
+.socialBtns .btn.email:before {
+  background-color: #f26798;
+}
+.socialBtns .btn.email .fa {
+  color: #f26798;
+}
+.socialBtns .btn.upwork:before {
+  background-color: #73bb44;
+}
+.socialBtns .btn.upwork .fa {
+  color: #73bb44;
+}
+.socialBtns .btn.myWebsite:before {
+  background-color: #7066e0;
+}
+.socialBtns .btn.myWebsite .fa {
+  color: #7066e0;
+}
+.socialBtns .btn:focus:before,
+.socialBtns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.socialBtns .btn:focus .fa,
+.socialBtns .btn:hover .fa {
+  color: #fff;
+  transform: scale(0.8);
+}
+
+.socialBtns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  opacity: 0.99;
+}
+.socialBtns .btn:before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.socialBtns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
