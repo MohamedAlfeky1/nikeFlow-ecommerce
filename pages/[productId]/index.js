@@ -33,7 +33,6 @@ export async function getStaticPaths() {
     paths: products.map((product) => ({
       params: { productId: product._id.toString() },
     })),
-    revalidate: 10,
   };
 }
 
@@ -55,5 +54,6 @@ export async function getStaticProps(context) {
         id: selectedProduct._id.toString(),
       },
     },
+    revalidate: 10,
   };
 }
