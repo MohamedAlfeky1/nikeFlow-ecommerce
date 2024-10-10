@@ -29,10 +29,11 @@ export async function getStaticPaths() {
   dbConnect();
   const products = await Product.find({}, { _id: 1 });
   return {
-    fallback: false,
+    fallback: "blocking",
     paths: products.map((product) => ({
       params: { productId: product._id.toString() },
     })),
+    revalidate: 10,
   };
 }
 
